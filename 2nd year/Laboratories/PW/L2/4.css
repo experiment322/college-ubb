@@ -1,0 +1,65 @@
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+nav > a {
+    width: 80px;
+    height: 84px;
+}
+
+nav > a#facebook {
+    background: url("sprite.png") -4px 84px;
+}
+
+nav > a#facebook:hover {
+    background: url("sprite.png") -4px 0;
+}
+
+nav > a#dots {
+    background: url("sprite.png") -88px 84px;
+}
+
+nav > a#dots:hover {
+    background: url("sprite.png") -88px 0;
+}
+
+nav > a#ball {
+    background: url("sprite.png") -172px 84px;
+}
+
+nav > a#ball:hover {
+    background: url("sprite.png") -172px 0;
+}
+
+nav > a#gplus {
+    background: url("sprite.png") -256px 84px;
+}
+
+nav > a#gplus:hover {
+    background: url("sprite.png") -256px 0;
+}
+
+nav > a#linkedin {
+    background: url("sprite.png") -340px 84px;
+}
+
+nav > a#linkedin:hover {
+    background: url("sprite.png") -340px 0;
+}
+
+nav > a#pinterest {
+    background: url("sprite.png") -424px 84px;
+}
+
+nav > a#pinterest:hover {
+    background: url("sprite.png") -424px 0;
+}
+
+nav > a#wifi {
+    background: url("sprite.png") -506px 84px;
+}
+
+nav > a#wifi:hover {
+    background: url("sprite.png") -506px 0;
+}

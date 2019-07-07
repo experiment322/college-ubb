@@ -1,0 +1,17 @@
+plugins {
+    id "org.springframework.boot" version "2.1.4.RELEASE" apply false
+}
+
+subprojects {
+    group 'com.mad.mpp'
+    version '1.0.0'
+
+    apply plugin: 'java'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+}

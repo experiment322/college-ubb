@@ -1,0 +1,363 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <title>My RPG character</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body bgcolor="#f5f5dc">
+<div align="center">
+    <h1>Welcome</h1>
+    <h2>to</h2>
+    <h3>ultimate</h3>
+    <h4>RPG</h4>
+    <h5>character</h5>
+    <h6>creator</h6>
+    <br>
+    <ol start="1" type="I">
+        <li>
+            <strong>
+                Input your character specifications
+            </strong>
+        </li>
+        <li>
+            <strong>
+                Make sure they are valid
+            </strong>
+        </li>
+        <li>
+            <strong>
+                Click SUBMIT to get a PDF version of this sheet
+            </strong>
+        </li>
+    </ol>
+    <br>
+</div>
+<form action="#">
+    <fieldset>
+        <legend>
+            <b>Details</b>
+        </legend>
+        <table>
+            <tr>
+                <th></th>
+                <th></th>
+                <th valign="middle">
+                    You stab the dragon with your cheap copper short sword...
+                    <br>
+                    You die!
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <label for="player_name">
+                        <i>Player name</i>
+                    </label>
+                    <div>
+                        <input id="player_name" type="text">
+                    </div>
+                </td>
+                <td>
+                    <label for="character_name">
+                        <i>Character name</i>
+                    </label>
+                    <div>
+                        <input id="character_name" type="text">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="level">
+                        <i>Level</i>
+                    </label>
+                    <div>
+                        <input id="level" type="text">
+                    </div>
+                </td>
+                <td>
+                    <label for="experience">
+                        <i>Experience</i>
+                    </label>
+                    <div>
+                        <input id="experience" type="text">
+                    </div>
+                </td>
+                <td rowspan="3" colspan="0" valign="middle">
+                    <center>
+                        <img src="dragon.png" alt="dragon" width="320" height="182">
+                    </center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="age">
+                        <i>Age</i>
+                    </label>
+                    <div>
+                        <input id="age" type="text">
+                    </div>
+                </td>
+                <td>
+                    <label for="avatar">
+                        <i>Avatar</i>
+                    </label>
+                    <div>
+                        <input id="avatar" type="file" accept="image/*">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <i>Gender</i>
+                </td>
+                <td>
+                    <div>
+                        <label>
+                            <input name="gender" type="radio">Male
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input name="gender" type="radio">Female
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input name="gender" type="radio">Other
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="class">
+                        <i>Class</i>
+                        <a target="_blank" href="https://en.wikipedia.org/wiki/Character_class_(Dungeons_%26_Dragons)">
+                            (wikipedia)
+                        </a>
+                    </label>
+                </td>
+                <td>
+                    <div>
+                        <select id="class">
+                            <option>Barbarian</option>
+                            <option>Bard</option>
+                            <option>Cleric</option>
+                            <option>Druid</option>
+                            <option>Fighter</option>
+                            <option>Monk</option>
+                            <option>Paladin</option>
+                            <option>Ranger</option>
+                            <option>Rogue</option>
+                            <option>Sorcerer</option>
+                            <option>Warlock</option>
+                            <option>Wizard</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="desc">
+                        <i>Description</i>
+                    </label>
+                </td>
+                <td>
+                    <textarea id="desc" cols="64" rows="8"></textarea>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>
+            <b>Skills</b>
+        </legend>
+        <table>
+            <tr>
+                <td>
+                    <ul>
+                        <li>
+                            <label for="agility">
+                                <i>Agility</i>
+                            </label>
+                            <span>
+                                <input id="agility" type="text" value="10" maxlength="3">
+                            </span>
+                        </li>
+                        <li>
+                            <label for="dexterity">
+                                <i>Dexterity</i>
+                            </label>
+                            <span>
+                                <input id="dexterity" type="text" value="10" maxlength="3">
+                            </span>
+                        </li>
+                        <li>
+                            <label for="creation">
+                                <i>Creation</i>
+                            </label>
+                            <span>
+                                <input id="creation" type="text" value="10" maxlength="3">
+                            </span>
+                        </li>
+                        <li>
+                            <label for="logic">
+                                <i>Logic</i>
+                            </label>
+                            <span>
+                                <input id="logic" type="text" value="10" maxlength="3">
+                            </span>
+                        </li>
+                        <li>
+                            <label for="perception">
+                                <i>Perception</i>
+                            </label>
+                            <span>
+                                <input id="perception" type="text" value="10" maxlength="3">
+                            </span>
+                        </li>
+                        <li>
+                            <label for="learning">
+                                <i>Learning</i>
+                            </label>
+                            <span>
+                                <input id="learning" type="text" value="10" maxlength="3">
+                            </span>
+                        </li>
+                        <li>
+                            <label for="deception">
+                                <i>Deception</i>
+                            </label>
+                            <span>
+                                <input id="deception" type="text" value="10" maxlength="3">
+                            </span>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>
+            <strong>
+                Abilities
+            </strong>
+        </legend>
+        <table>
+            <tr>
+                <td>
+                    <label>
+                        <i>STR</i>
+                        <input type="checkbox" checked>
+                        <input type="checkbox" checked>
+                        <input type="checkbox" checked>
+                        <input type="checkbox">
+                        <input type="checkbox">
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        <i>DEX</i>
+                        <input type="checkbox" checked>
+                        <input type="checkbox" checked>
+                        <input type="checkbox" checked>
+                        <input type="checkbox">
+                        <input type="checkbox">
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        <i>CON</i>
+                        <input type="checkbox" checked>
+                        <input type="checkbox" checked>
+                        <input type="checkbox" checked>
+                        <input type="checkbox">
+                        <input type="checkbox">
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        <i>INT</i>
+                        <input type="checkbox" checked>
+                        <input type="checkbox" checked>
+                        <input type="checkbox" checked>
+                        <input type="checkbox">
+                        <input type="checkbox">
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        <i>WIS</i>
+                        <input type="checkbox" checked>
+                        <input type="checkbox" checked>
+                        <input type="checkbox" checked>
+                        <input type="checkbox">
+                        <input type="checkbox">
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        <i>CHA</i>
+                        <input type="checkbox" checked>
+                        <input type="checkbox" checked>
+                        <input type="checkbox" checked>
+                        <input type="checkbox">
+                        <input type="checkbox">
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled>
+                    </label>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <center>
+        <table border="10">
+            <tr>
+                <td>
+                    <input type="image" src="submit.png" alt="submit">
+                </td>
+            </tr>
+        </table>
+    </center>
+</form>
+</body>
+</html>

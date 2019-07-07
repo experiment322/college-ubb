@@ -1,0 +1,8 @@
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+dependencies {
+    implementation project(':data')
+    implementation project(':common')
+    implementation 'org.springframework.boot:spring-boot-starter:2.1.3.RELEASE'
+}

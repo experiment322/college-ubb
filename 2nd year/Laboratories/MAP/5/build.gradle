@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+
+group 'alex.map.lab'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'application'
+mainClassName = "Main"
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}

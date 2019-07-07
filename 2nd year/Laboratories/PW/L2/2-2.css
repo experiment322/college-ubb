@@ -1,0 +1,50 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+header {
+    background-color: red;
+    padding: 0 16px;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.container > nav {
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+}
+
+.container > nav > a {
+    display: flex;
+    padding: 16px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0;
+    border-bottom-width: 1px;
+}
+
+.container > nav > a:last-child {
+    border-bottom-width: 0;
+}
+
+.container > main {
+    background-color: green;
+    flex: 1;
+    padding: 0 16px;
+}
+
+footer {
+    background-color: pink;
+    padding: 0 16px;
+}

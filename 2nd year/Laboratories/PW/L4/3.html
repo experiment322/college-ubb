@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 3</title>
+    <style>
+        .matrix {
+            width: 512px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border: chocolate 1px solid;
+            box-sizing: content-box;
+        }
+
+        .tile {
+            width: 128px;
+            height: 128px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: burlywood;
+            border: chocolate 2px solid;
+            box-sizing: border-box;
+        }
+
+        .tile-flipped {
+            background-color: chocolate;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tiles = [];
+            const tileNo = 16;
+            let timeout = null;
+
+            for (let i = 0; i < tileNo; i++) {
+                tiles[i] = Math.floor(i / 2);
+            }
+            for (let i = 0; i < tileNo; i++) {
+                const j = Math.floor(Math.random() * 31) % tileNo;
+                [tiles[i], tiles[j]] = [tiles[j], tiles[i]];
+            }
+
+            const matrix = document.getElementById("matrix");
+            for (let i = 0; i < tileNo; i++) {
+                const tile = document.createElement("div");
+                tile.classList.add("tile");
+                tile.id = `${i}`;
+                matrix.appendChild(tile);
+
+                tile.addEventListener("click", function () {
+                    const flippedTiles = matrix.querySelectorAll(".tile-flipped");
+                    if (!this.classList.contains("tile-matched") && flippedTiles.length < 2) {
+                        this.innerHTML = `<p>${tiles[Number(this.id)]}</p>`;
+                        this.classList.add("tile-flipped");
+                    }
+
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => {
+                        if (flippedTiles.length >= 1) {
+                            const i = tiles[Number(this.id)];
+                            const j = tiles[Number(flippedTiles[0].id)];
+                            this.classList.remove("tile-flipped");
+                            flippedTiles[0].classList.remove("tile-flipped");
+                            if (i !== j) {
+                                this.innerHTML = null;
+                                flippedTiles[0].innerHTML = null;
+                            } else {
+                                this.classList.add("tile-matched");
+                                flippedTiles[0].classList.add("tile-matched");
+                            }
+                        }
+                    }, 250);
+                });
+            }
+        });
+    </script>
+</head>
+<body style="display: flex; justify-content: center;">
+
+<div id="matrix" class="matrix">
+
+</div>
+
+</body>
+</html>

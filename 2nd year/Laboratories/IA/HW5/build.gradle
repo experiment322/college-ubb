@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '4.0.2'
+}
+
+group 'com.mad.ai'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.mad.ai.Main'
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'http://neuroph.sourceforge.net/maven2'
+    }
+}
+
+dependencies {
+    implementation 'org.neuroph:neuroph-core:2.94'
+    implementation 'io.jenetics:jenetics.prog:4.4.0'
+}

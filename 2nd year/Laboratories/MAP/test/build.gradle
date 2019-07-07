@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'alex.map.lab'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'application'
+mainClassName = "Main"
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.projectlombok:lombok:1.18.4'
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "Main"
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

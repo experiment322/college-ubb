@@ -1,0 +1,4 @@
+gimp.exe
+explorer.exe        25      120
+iexplore.exe        54      20
+gimp.exe            73      88

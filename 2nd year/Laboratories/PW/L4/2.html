@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("form");
+            const name = document.getElementById("name");
+            const birth = document.getElementById("birth");
+            const age = document.getElementById("age");
+            const mail = document.getElementById("mail");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const nameOk = /^[a-z ,.'-]+$/i.test(name.value);
+                name.style.borderColor = nameOk ? "" : "red";
+
+                const birthOk = /^\d{2}\/\d{2}\/\d{4}$/i.test(birth.value)
+                    && new Date(`${birth.value} +0`).getFullYear() < new Date().getFullYear();
+                birth.style.borderColor = birthOk ? "" : "red";
+
+                const actualAge = Math.abs(new Date(`${birth.value} +0`).getFullYear() - new Date().getFullYear());
+                const ageOk = Number(age.value) === actualAge;
+                age.style.borderColor = ageOk ? "" : "red";
+
+                const mailOk = /^[\w-]+@([\w-]+\.)+[\w-]+$/i.test(mail.value);
+                mail.style.borderColor = mailOk ? "" : "red";
+
+                if (nameOk && birthOk && ageOk && mailOk) {
+                    alert("Datele sunt completate corect");
+                } else {
+                    const badFields = [];
+                    if (!nameOk) badFields.push("name");
+                    if (!birthOk) badFields.push("birth");
+                    if (!ageOk) badFields.push("age");
+                    if (!mailOk) badFields.push("mail");
+                    alert(`Anumite campuri (${badFields.join(", ")}) sunt completate incorect`);
+                }
+            });
+        });
+    </script>
+</head>
+<body style="display: flex; justify-content: center;">
+
+<form id="form" style="display: flex; flex-direction: column; align-items: flex-end;">
+    <div style="display: flex; align-items: center; padding: 16px;">
+        <label for="name">NAME:</label>
+        <input id="name" placeholder="First Last" type="text" style="background-color: transparent;">
+    </div>
+
+    <div style="display: flex; align-items: center; padding: 16px;">
+        <label for="birth">BORN:</label>
+        <input id="birth" placeholder="MM/DD/YYYY" type="text" style="background-color: transparent;">
+    </div>
+
+    <div style="display: flex; align-items: center; padding: 16px">
+        <label for="age">AGE:</label>
+        <input id="age" placeholder="Y" type="text" style="background-color: transparent;">
+    </div>
+
+    <div style="display: flex; align-items: center; padding: 16px;">
+        <label for="mail">MAIL:</label>
+        <input id="mail" type="text" style="background-color: transparent;">
+    </div>
+
+    <button style="align-self: center;">SUBMIT</button>
+</form>
+
+</body>
+</html>

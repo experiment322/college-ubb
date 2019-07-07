@@ -1,0 +1,58 @@
+html, body {
+	margin: 0;
+}
+
+#content {
+	width: 500px;
+	height: 500px;
+	display: inline-block;
+	margin-left: 350px;
+}
+
+#filter-select, #filter-input, #category-select {
+	box-sizing: border-box;
+	width: 300px;
+	font-size: 20px;
+	margin: 5px;
+	padding: 5px;
+}
+
+
+#filter, #categories {
+	position: absolute;
+	width: 300px;
+	top: 200px;
+}
+
+#categories {
+	top: 70px;
+}
+
+.product {
+	width: 300px;
+	height: auto;
+	margin: 10px;
+	border: 1px solid steelblue;
+}
+
+ul {
+	list-style-type: none;
+}
+strong, h2 {
+	color: steelblue;
+	padding: 5px;
+}
+
+h1 {
+	text-transform: uppercase;
+	padding: 20px;
+}
+
+h1 {
+	background-color: steelblue;
+	color: white;
+	box-sizing: border-box;
+	margin: 0 0 10px 0;
+}
+
+

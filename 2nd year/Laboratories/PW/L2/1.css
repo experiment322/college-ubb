@@ -1,0 +1,27 @@
+.parent {
+    border: 1px black solid;
+    padding: 16px;
+    display: inline-flex;
+}
+
+.parent > .child {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.child.left {
+}
+
+.child.left > .description {
+}
+
+.child.right {
+}
+
+.child.right > .image {
+    width: 200px;
+    height: 200px;
+}

@@ -1,0 +1,90 @@
+/*
+
+PROBLEMA
+
+[RO] Programul urmator citeste n siruri de caractere de la intrarea
+standard si le scrie intr-un fisier doar pe cele care contin subsirul
+furnizat in linia de comanda.
+Copiati acest fisier intr-un alt fisier cu extensia .c (de exemplu a.c)
+si rezolvati problemele de compilare (erori si warning-uri) si rulare,
+astfel incat programul sa functioneze corect.
+
+[EN] The following program reads n strings from standard input and it
+writes only those containing the command line given substring to a file.
+Copy this file to another file having a .c extension (eg. a.c) and fix
+the compilation problems (errors and warnings) and the runtime problems,
+so that the program works properly.
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+#define BUF_SIZE 2
+
+int main (int argc, char *argv[])
+{
+	int j;
+	char **sp;
+	char buf[BUF_SIZE];
+
+	if (argc == 1)
+	{
+		printf("Error: Insufficient number of arguments.\n");
+		printf("Usage: ./a.out substring_to_match\n");
+		return 1;
+	}
+
+	printf("n: ");
+	fgets(buf, BUF_SIZE, stdin);
+	int n = atoi(buf);
+
+	sp = (char **)malloc(n * sizeof(char *));
+	if (sp == NULL)
+	{
+		perror("malloc()");
+		return 1;
+	}
+
+	for (i = 0; i < n; i++)
+	{
+		sp[i] = (char *)malloc(MAX_SIZE * sizeof(char));
+		if (sp[i] == NULL)
+		{
+			perror("malloc()");
+			return 1;
+		}
+	}
+
+	for (i = 0; i < n; i++)
+	{
+		printf("s%d: ", i);
+		if ((fgets(sp[i], MAX_SIZE, stdin)) == NULL)
+		{
+			perror("fgets()");
+			return 1;
+		}
+	}
+
+	int fd = open("out.txt", O_WRONLY, 0600);
+	if (fd < 0)
+	{
+        perror("open()");
+        return 1;
+    }
+
+	for (i = 0; i < n; i++);
+	{
+		if (strstr(sp[i], argv[1]))
+			write(fd, sp[i], strlen(sp[i]));
+		
+		free(sp[i]);
+	}
+
+	close(fd);
+	return 0;
+}

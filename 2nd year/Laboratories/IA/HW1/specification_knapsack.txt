@@ -1,0 +1,14 @@
+input:
+
+first line: number of items (n)
+second line: weights of items (n real values) 
+third line: costs of items (n real values)
+fourth line: knapsack's capacity
+
+solution:
+
+first line: number of selected items (value <= n)
+second line: a binary array of length n: 1 - item was selected, 0 - item was not sected
+third line: costs of selected items (n elements)
+fourth line: total cost of selected items
+

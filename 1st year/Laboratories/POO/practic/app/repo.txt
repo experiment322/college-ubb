@@ -1,0 +1,48 @@
+3
+3
+geo emi 
+closed
+4
+4
+wolverine 
+closed
+8
+8
+edi 
+closed
+2
+2
+mihai 
+inprogress
+6
+6
+mika alex 
+inprogress
+7
+7
+mika alex geo 
+inprogress
+1
+1
+alex 
+open
+5
+5
+mika 
+open
+9
+9
+edi alex 
+open
+10
+10
+edi alex oleg soseta 
+open
+11
+dsa
+1 2 3 4 
+open
+312
+dsdasda
+dsadas 
+open

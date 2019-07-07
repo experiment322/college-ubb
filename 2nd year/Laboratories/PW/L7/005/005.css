@@ -1,0 +1,35 @@
+#container {
+	width: 400px;
+}
+
+#file {
+	border: 2px solid red;
+}
+
+h1 {
+	text-transform: uppercase;
+	color: steelblue;
+}
+
+ul {
+	list-style-type: none;
+	background-color: steelblue;
+	margin: 20 auto;
+	box-sizing: border-box;
+	
+}
+
+li {
+	box-sizing: border-box;
+	/*height: 30px;*/
+	font-size: 20px;
+	color: white;
+	transition-duration: 0.5s;
+	padding: 5px;
+}
+
+li:hover {
+	background-color: white;
+	color: steelblue;
+}
+

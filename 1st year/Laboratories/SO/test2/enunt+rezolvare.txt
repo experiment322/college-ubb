@@ -1,0 +1,2 @@
+sa se afiseze numele intreg al fiecarui utilizator si inserati o linie noua inainte fiecarei linii care incepe cu [ACF] cu continutul "linie noua"
+cat /etc/passwd | awk -F ':' '{if ($5 ~ /^[ACF].+/) print "linie noua\n"$5; else print $5}'

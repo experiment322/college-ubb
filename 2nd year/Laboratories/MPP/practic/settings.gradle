@@ -1,0 +1,5 @@
+rootProject.name = 'practic'
+include 'data'
+include 'common'
+include 'server'
+include 'client'
